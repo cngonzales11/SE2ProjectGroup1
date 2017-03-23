@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Movescene : MonoBehaviour {
 
-    [SerializeField] private string loadLevel;
+    public string loadLevel;
 	
-	void OnTriggerEmter(Collider other)
+	void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.tag == "Player")
         {
             SceneManager.LoadScene(loadLevel);        }
     }
