@@ -5,17 +5,23 @@ using UnityEngine;
 public class CameraRotation : MonoBehaviour
 {
 
-    public GameObject target;
+    public Player target;
     public float rotateSpeed = 5;
     Vector3 offset;
 
     void Start()
     {
+        target = FindObjectOfType<Player>();
         offset = target.transform.position - transform.position;
     }
 
     void LateUpdate()
     {
+        if (!target.canMove)
+        {
+            return;
+        }
+
         float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
         target.transform.Rotate(0, horizontal, 0);
 

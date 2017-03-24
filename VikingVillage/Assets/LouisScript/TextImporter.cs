@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class TextImporter : MonoBehaviour {
 
-    public TextAsset textFile;
-    public string[] textLines;
+    
     
     // Use this for initialization
-	void Start () {
+	public static string[] ImportText(TextAsset textFile)
+    {
+        string[] textLines;
 	
-        if(textFile != null)
-        {
-            textLines = (textFile.text.Split('\n'));
-        }
-        	
+        textLines = (textFile.text.Split('\n'));
+        return textLines;        	
 	}
 	
 }

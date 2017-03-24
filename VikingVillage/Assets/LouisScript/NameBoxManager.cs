@@ -3,40 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextBoxManager : MonoBehaviour {
+public class NameBoxManager : MonoBehaviour {
 
-    public GameObject textBox;
-
-    public Text theText;
-
+    public TextBoxManager manager;
     public TextAsset textFile;
+    public GameObject textBox;
+    public Text text;
     public string[] textLines;
-    public int currentLine;
-    public int endAtLine;
-
-    public Player player;
+    public int readLine;
 
     public bool isActive;
 
-    public bool stopPlayerMovement;
-
     // Use this for initialization
-    void Start()
+    void Start ()
     {
-
-        player = FindObjectOfType<Player>();
+        manager = FindObjectOfType<TextBoxManager>();
 
         if (textFile != null)
         {
             LoadText(textFile);
         }
 
-        if(endAtLine == 0)
-        {
-            endAtLine = textLines.Length - 1;
-        }
-
-        if (isActive)
+        if (manager.isActive)
         {
             EnableTextBox();
         } else
@@ -45,44 +33,31 @@ public class TextBoxManager : MonoBehaviour {
         }
 
     }
-
-    void Update()
+	
+	// Update is called once per frame
+	void Update ()
     {
-        if (!isActive)
+        text.text = textLines[readLine];
+
+        if (manager.isActive)
         {
-            return;
-        }
-
-        theText.text = textLines[currentLine];
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            currentLine++;
-        }
-
-        if(currentLine > endAtLine)
+            EnableTextBox();
+        } else
         {
             DisableTextBox();
         }
-    }
+	}
 
     public void EnableTextBox()
     {
         textBox.SetActive(true);
         isActive = true;
-
-        if (stopPlayerMovement)
-        {
-            player.canMove = false;
-        }
     }
 
     public void DisableTextBox()
     {
         textBox.SetActive(false);
         isActive = false;
-
-        player.canMove = true;
     }
 
     public void LoadText(TextAsset textFile)

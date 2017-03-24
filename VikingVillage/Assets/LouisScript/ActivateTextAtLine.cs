@@ -31,15 +31,7 @@ public class ActivateTextAtLine : MonoBehaviour
 
         if(waitForPress && Input.GetKeyDown(KeyCode.E))
         {
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
-
-            if (destroyWhenActivated)
-            {
-                Destroy(gameObject);
-            }
+            ShowDialogue();
         }
 
     }
@@ -54,15 +46,7 @@ public class ActivateTextAtLine : MonoBehaviour
                 return;
             }
 
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
-
-            if (destroyWhenActivated)
-            {
-                Destroy(gameObject);
-            }
+            ShowDialogue();
         }
     }
 
@@ -72,6 +56,20 @@ public class ActivateTextAtLine : MonoBehaviour
         {
             waitForPress = false;
         }
+    }
+
+    void ShowDialogue()
+    {
+        theTextBox.LoadText(theText);
+        theTextBox.currentLine = startLine;
+        theTextBox.endAtLine = endLine;
+        theTextBox.EnableTextBox();
+
+        if (destroyWhenActivated)
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
 
