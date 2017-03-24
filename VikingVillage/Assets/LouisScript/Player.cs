@@ -6,8 +6,15 @@ public class Player : MonoBehaviour {
 
     public float movementSpeed = 10;
 
+    public bool canMove;
+
     void Update()
     {
+        if (!canMove)
+        {
+            return;
+        }
+
         float horizontal = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
         transform.Translate(horizontal, 0, 0);
 

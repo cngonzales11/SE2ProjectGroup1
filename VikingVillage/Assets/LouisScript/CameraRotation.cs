@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour {
+public class CameraRotation : MonoBehaviour
+{
 
     public GameObject target;
     public float rotateSpeed = 5;
