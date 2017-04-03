@@ -1,12 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{7CEA1CA3-08B9-4EED-43D7-D9E32E7626CC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -47,52 +46,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BattleScene\Character.cs" />
-    <Compile Include="Assets\BattleScene\ClickAction.cs" />
-    <Compile Include="Assets\BattleScene\DisplayHealth.cs" />
-    <Compile Include="Assets\BattleScene\Heal.cs" />
-    <Compile Include="Assets\BattleScene\KickStart.cs" />
-    <Compile Include="Assets\BattleScene\Move.cs" />
-    <Compile Include="Assets\BattleScene\SelectMove.cs" />
-    <Compile Include="Assets\BattleScene\Strike.cs" />
-    <Compile Include="Assets\BattleScene\Tile.cs" />
-    <Compile Include="Assets\BattleScene\battleSystem.cs" />
-    <Compile Include="Assets\LouisScript\ActivateTextAtLine.cs" />
-    <Compile Include="Assets\LouisScript\CameraRotation.cs" />
-    <Compile Include="Assets\LouisScript\NameBoxManager.cs" />
-    <Compile Include="Assets\LouisScript\Player.cs" />
-    <Compile Include="Assets\LouisScript\TextBoxManager.cs" />
-    <Compile Include="Assets\LouisScript\TextImporter.cs" />
-    <Compile Include="Assets\TinScript\CamMouseLook.cs" />
-    <Compile Include="Assets\TinScript\ItemDatabase.cs" />
-    <Compile Include="Assets\TinScript\Movement.cs" />
-    <Compile Include="Assets\TinScript\Movescene.cs" />
-    <None Include="Assets\TinInventoryAssets\UIpack_RPG\license.txt" />
-    <None Include="Assets\Text\NPC_Names01.txt" />
-    <None Include="Assets\Text\textTest.txt" />
-    <None Include="Assets\Text\NPC_Speech01.txt" />
-    <None Include="Assets\The_Texture_Lab\TL_Prototype_Textures_Pack\Documentation.txt" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PlaymodeTestsRunner">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VR">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
-    </Reference>
-    <Reference Include="LitJson">
-      <HintPath>C:/Users/Tin Phan/Group1Project/SE2ProjectGroup1/VikingVillage/Assets/TinScript/Plugin/LitJson.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\BattleScene\Character.cs" />
+     <Compile Include="Assets\BattleScene\ClickAction.cs" />
+     <Compile Include="Assets\BattleScene\DisplayHealth.cs" />
+     <Compile Include="Assets\BattleScene\Heal.cs" />
+     <Compile Include="Assets\BattleScene\KickStart.cs" />
+     <Compile Include="Assets\BattleScene\Move.cs" />
+     <Compile Include="Assets\BattleScene\SelectMove.cs" />
+     <Compile Include="Assets\BattleScene\Strike.cs" />
+     <Compile Include="Assets\BattleScene\Tile.cs" />
+     <Compile Include="Assets\BattleScene\battleSystem.cs" />
+     <Compile Include="Assets\LouisScript\ActivateTextAtLine.cs" />
+     <Compile Include="Assets\LouisScript\CameraRotation.cs" />
+     <Compile Include="Assets\LouisScript\NameBoxManager.cs" />
+     <Compile Include="Assets\LouisScript\Player.cs" />
+     <Compile Include="Assets\LouisScript\TextBoxManager.cs" />
+     <Compile Include="Assets\LouisScript\TextImporter.cs" />
+     <Compile Include="Assets\TinScript\CamMouseLook.cs" />
+     <Compile Include="Assets\TinScript\InventoryScript\Inventory.cs" />
+     <Compile Include="Assets\TinScript\InventoryScript\ItemDatabase.cs" />
+     <Compile Include="Assets\TinScript\InventoryScript\Items.cs" />
+     <Compile Include="Assets\TinScript\Movement.cs" />
+     <Compile Include="Assets\TinScript\Movescene.cs" />
+     <None Include="Assets\Text\NPC_Names01.txt" />
+     <None Include="Assets\Text\textTest.txt" />
+     <None Include="Assets\Text\NPC_Speech01.txt" />
+     <None Include="Assets\The_Texture_Lab\TL_Prototype_Textures_Pack\Documentation.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>C:/Users/Tin Phan/Group1Project/SE2ProjectGroup1/VikingVillage/Assets/TinScript/Plugin/LitJson.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -102,4 +102,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>
