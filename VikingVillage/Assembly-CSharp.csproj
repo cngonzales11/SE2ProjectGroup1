@@ -64,6 +64,7 @@
      <Compile Include="Assets\LouisScript\TextImporter.cs" />
      <Compile Include="Assets\TinScript\CamMouseLook.cs" />
      <Compile Include="Assets\TinScript\InventoryScript\Inventory.cs" />
+     <Compile Include="Assets\TinScript\InventoryScript\ItemData.cs" />
      <Compile Include="Assets\TinScript\InventoryScript\ItemDatabase.cs" />
      <Compile Include="Assets\TinScript\InventoryScript\Items.cs" />
      <Compile Include="Assets\TinScript\Movement.cs" />
