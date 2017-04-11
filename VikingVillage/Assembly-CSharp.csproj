@@ -67,6 +67,7 @@
      <Compile Include="Assets\TinScript\InventoryScript\ItemData.cs" />
      <Compile Include="Assets\TinScript\InventoryScript\ItemDatabase.cs" />
      <Compile Include="Assets\TinScript\InventoryScript\Items.cs" />
+     <Compile Include="Assets\TinScript\InventoryScript\Slot.cs" />
      <Compile Include="Assets\TinScript\Movement.cs" />
      <Compile Include="Assets\TinScript\Movescene.cs" />
      <None Include="Assets\Text\NPC_Names01.txt" />
