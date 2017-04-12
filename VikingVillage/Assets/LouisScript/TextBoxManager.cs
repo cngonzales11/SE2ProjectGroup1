@@ -28,7 +28,7 @@ public class TextBoxManager : MonoBehaviour {
 
         if (textFile != null)
         {
-            textLines = (textFile.text.Split('\n'));
+            LoadText(textFile);
         }
 
         if(endAtLine == 0)
@@ -85,12 +85,9 @@ public class TextBoxManager : MonoBehaviour {
         player.canMove = true;
     }
 
-    public void ReloadScript(TextAsset newText)
+    public void LoadText(TextAsset textFile)
     {
-        if(newText != null)
-        {
-            textLines = new string[1];
-            textLines = (newText.text.Split('\n'));
-        }
+        textLines = TextImporter.ImportText(textFile);
+
     }
 }
