@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler,IPointerExitHandler
 {
 
         public Items item;
@@ -13,12 +13,14 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         
         private Inventory inventory;
+        private ToolTip tooltip;
         private Vector2 offset;
     
 
     void Start()
     {
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        tooltip = inventory.GetComponent<ToolTip>();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -46,5 +48,15 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         this.transform.SetParent(inventory.slots[slotID].transform);
         this.transform.position = inventory.slots[slotID].transform.position;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        tooltip.Activate(item);   
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        tooltip.Deactivate();
     }
 }

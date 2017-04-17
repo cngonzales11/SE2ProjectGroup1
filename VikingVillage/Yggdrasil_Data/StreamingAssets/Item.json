@@ -1,20 +1,22 @@
 [
   {
     "id": 0,
+    "title": "Bronze Sword",
+    "value": 6,
+    "damageMin": 1,
+    "damageMax": 3,
+    "description": "Sword forge from Iron",
+    "slug": "BronzeSword",
+    "stackable": true
+  },
+  {
+    "id": 1,
     "title": "Iron Sword",
     "value": 6,
     "damageMin": 1,
     "damageMax": 3,
-    "description": "Sword forge from Iron"
-  },
-  {
-    
-    "id": 1,
-    "title": "wood Sword",
-    "value": 6,
-    "damageMin": 1,
-    "damageMax": 3,
-    "description": "Sword craft from wood"
-
+    "description": "Sword forge from Iron",
+    "slug": "BronzeSword",
+    "stackable": false
   }
 ]
