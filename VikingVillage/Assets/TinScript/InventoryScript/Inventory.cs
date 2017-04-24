@@ -11,16 +11,20 @@ public class Inventory : MonoBehaviour
     public GameObject inventorySlot;
     public GameObject invetoryItem;
     ItemDatabase database;
-
+    CheckItemExsist check;
     int slotAmount;
     public List<Items> items = new List<Items>();
     public List<GameObject> slots = new List<GameObject>();
 
     void Start()
     {
+        //get database
         database = GetComponent<ItemDatabase>();
+        //slot maxium amount
         slotAmount = 16;
-        invetoryPanel = GameObject.Find("Inventory Panel");
+        //game object inventory panel
+        invetoryPanel = GameObject.Find("PlayerInventoryPanel");
+        //game object slot panel
         slotPanel = invetoryPanel.transform.FindChild("Slot Panel").gameObject;
 
         for(int i = 0; i< slotAmount; i++)
@@ -30,16 +34,18 @@ public class Inventory : MonoBehaviour
             slots[i].GetComponent<Slot>().slotId = i;
             slots[i].transform.SetParent(slotPanel.transform);
         }
-        AddItem(0);
+
         AddItem(1);
-
     }
-
+    
+    //Add item and check if the item is stackable.
     public void AddItem(int id)
     {
 
         Items itemToAdd = database.FetchItemById(id);
-        if (itemToAdd.Stackable && CheckItemExsist(itemToAdd))
+        //check if item is already there and if it is stackable
+        //if stackable add to the data show item stack.
+        if (itemToAdd.Stackable && check.CheckItem(itemToAdd))
         {
             for (int i = 0; i < items.Count; i++)
             {
@@ -52,6 +58,7 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+        //else make new item in new slots.
         else
         {
 
@@ -62,6 +69,7 @@ public class Inventory : MonoBehaviour
                     items[i] = itemToAdd;
                     GameObject itemObj = Instantiate(invetoryItem);
                     itemObj.GetComponent<ItemData>().item = itemToAdd;
+                    itemObj.GetComponent<ItemData>().amount = 1;
                     itemObj.GetComponent<ItemData>().slotID = i;
                     itemObj.transform.SetParent(slots[i].transform);
                     itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
@@ -73,13 +81,5 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    bool CheckItemExsist(Items item)
-    {
-        for (int i = 0; i < items.Count; i++)
-        { 
-            if (items[i].ID == item.ID)
-                return true;
-       }
-        return false;
-    }
+   
 }

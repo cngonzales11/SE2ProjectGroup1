@@ -4,7 +4,7 @@ using UnityEngine;
 using LitJson;
 using System.IO;
 
-
+//item database that read a json file then convert to a c# object
 public class ItemDatabase : MonoBehaviour
 {
     
@@ -13,8 +13,9 @@ public class ItemDatabase : MonoBehaviour
 
     void Start()
     {
-        
+        //read json file 
         itemData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/StreamingAssets/Item.json"));
+        //make database
         ConstructItemDatabase();
 
        

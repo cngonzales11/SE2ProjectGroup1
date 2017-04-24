@@ -14,6 +14,7 @@ public class Slot : MonoBehaviour, IDropHandler
     {
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
     }
+    //checking slot is available or not when item is drop into slot
     public void OnDrop(PointerEventData eventData)
     {
         ItemData droppedItem = eventData.pointerDrag.GetComponent<ItemData>();
@@ -23,7 +24,7 @@ public class Slot : MonoBehaviour, IDropHandler
             inventory.items[slotId] = droppedItem.item;
             droppedItem.slotID = slotId;
         }
-        else
+        else if(droppedItem.slotID != slotId)
         {
             Transform item = this.transform.GetChild(0);
             item.GetComponent<ItemData>().slotID = droppedItem.slotID;
