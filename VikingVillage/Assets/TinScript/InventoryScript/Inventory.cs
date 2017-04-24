@@ -18,9 +18,13 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
+        //get database
         database = GetComponent<ItemDatabase>();
+        //slot maxium amount
         slotAmount = 16;
+        //game object inventory panel
         invetoryPanel = GameObject.Find("PlayerInventoryPanel");
+        //game object slot panel
         slotPanel = invetoryPanel.transform.FindChild("Slot Panel").gameObject;
 
         for(int i = 0; i< slotAmount; i++)
@@ -33,11 +37,14 @@ public class Inventory : MonoBehaviour
 
         AddItem(1);
     }
-
+    
+    //Add item and check if the item is stackable.
     public void AddItem(int id)
     {
 
         Items itemToAdd = database.FetchItemById(id);
+        //check if item is already there and if it is stackable
+        //if stackable add to the data show item stack.
         if (itemToAdd.Stackable && CheckItemExsist(itemToAdd))
         {
             for (int i = 0; i < items.Count; i++)
@@ -51,6 +58,7 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+        //else make new item in new slots.
         else
         {
 
@@ -72,7 +80,7 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
+    //check if Item exists
     bool CheckItemExsist(Items item)
     {
         for (int i = 0; i < items.Count; i++)

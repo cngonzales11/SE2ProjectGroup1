@@ -101,7 +101,7 @@ public class battleSystem {
     public void endBattle()
     {
         Debug.Log("Battle Over");
-        SceneManager.LoadScene("FloorBattleFinish");
+        SceneManager.LoadScene("Floor");
     }
 
 }
