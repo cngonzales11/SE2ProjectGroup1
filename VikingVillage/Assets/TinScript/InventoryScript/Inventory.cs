@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     public GameObject inventorySlot;
     public GameObject invetoryItem;
     ItemDatabase database;
-
+    CheckItemExsist check;
     int slotAmount;
     public List<Items> items = new List<Items>();
     public List<GameObject> slots = new List<GameObject>();
@@ -45,7 +45,7 @@ public class Inventory : MonoBehaviour
         Items itemToAdd = database.FetchItemById(id);
         //check if item is already there and if it is stackable
         //if stackable add to the data show item stack.
-        if (itemToAdd.Stackable && CheckItemExsist(itemToAdd))
+        if (itemToAdd.Stackable && check.CheckItem(itemToAdd))
         {
             for (int i = 0; i < items.Count; i++)
             {
@@ -80,14 +80,6 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    //check if Item exists
-    bool CheckItemExsist(Items item)
-    {
-        for (int i = 0; i < items.Count; i++)
-        { 
-            if (items[i].ID == item.ID)
-                return true;
-       }
-        return false;
-    }
+
+   
 }
