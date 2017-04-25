@@ -1,32 +1,115 @@
-Initialize engine version: 5.5.0f3 (38b4efef76f0)
+Initialize engine version: 5.6.0f3 (497a0f351392)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon R9 200 Series (ID=0x6810)
-    Vendor:   ATI
-    VRAM:     2029 MB
-    Driver:   21.19.525.258
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 530 (ID=0x1912)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   20.19.15.4531
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-Platform assembly: C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\LitJson.dll (this message is harmless)
-Loading C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\LitJson.dll into Unity Child Domain
-- Completed reload, in  0.109 seconds
-Platform assembly: C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Tin Phan\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\LitJson.dll (this message is harmless)
+Loading H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\LitJson.dll into Unity Child Domain
+- Completed reload, in  0.366 seconds
+Platform assembly: H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: H:\Group1Project\SE2ProjectGroup1\VikingVillage\Yggdrasil_Data\Managed\System.dll (this message is harmless)
+desktop: 1280x800 59Hz; virtual: 1280x800 at 0,0
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.992713 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1af8 -> priority: 1 
-  Thread -> id: 600 -> priority: 1 
+UnloadTime: 8.490959 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 2fa0 -> priority: 1 
+  Thread -> id: 1f6c -> priority: 1 
+  Thread -> id: 2530 -> priority: 1 
+  Thread -> id: 26c8 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.664599 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 595.
+Total: 0.331117 ms (FindLiveObjects: 0.025840 ms CreateObjectMapping: 0.018629 ms MarkObjects: 0.269821 ms  DeleteObjects: 0.016826 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.477145 ms
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 427.
+Total: 0.361163 ms (FindLiveObjects: 0.020131 ms CreateObjectMapping: 0.034553 ms MarkObjects: 0.251793 ms  DeleteObjects: 0.054685 ms)
+
+Selecting a Move
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+80
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+TestEnemy (Character)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+TestEnemy (Character) took 30 damage, HP is now 50.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Strike Called on TestEnemy (Character)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Selecting a Move
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+80
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+TestEnemy (Character)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+TestEnemy (Character) took 30 damage, HP is now 20.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Strike Called on TestEnemy (Character)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Selecting a Move
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+80
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+TestEnemy (Character)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+TestEnemy (Character) took 30 damage, HP is now -10.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Battle Over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Strike Called on TestEnemy (Character)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.667041 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 596.
+Total: 0.334722 ms (FindLiveObjects: 0.024938 ms CreateObjectMapping: 0.018929 ms MarkObjects: 0.265915 ms  DeleteObjects: 0.024638 ms)
+

@@ -10,6 +10,7 @@ public class Movescene : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+
             SceneManager.LoadScene(loadLevel);
         }
     }

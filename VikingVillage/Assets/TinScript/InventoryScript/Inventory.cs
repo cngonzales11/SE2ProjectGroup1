@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,10 +12,16 @@ public class Inventory : MonoBehaviour
     public GameObject inventorySlot;
     public GameObject invetoryItem;
     ItemDatabase database;
-    CheckItemExsist check;
     int slotAmount;
+
     public List<Items> items = new List<Items>();
     public List<GameObject> slots = new List<GameObject>();
+
+    public bool isActive;
+    public bool stopPlayerMovement;
+    public Player player;
+    public TextAsset textFile;
+    private string[] textlines;
 
     void Start()
     {
@@ -26,8 +33,10 @@ public class Inventory : MonoBehaviour
         invetoryPanel = GameObject.Find("PlayerInventoryPanel");
         //game object slot panel
         slotPanel = invetoryPanel.transform.FindChild("Slot Panel").gameObject;
-
-        for(int i = 0; i< slotAmount; i++)
+        //read from a text file
+        textlines = TextImporter.ImportText(textFile);
+        //create each item in a slot 
+        for (int i = 0; i < slotAmount; i++)
         {
             items.Add(new Items());
             slots.Add(Instantiate(inventorySlot));
@@ -35,7 +44,36 @@ public class Inventory : MonoBehaviour
             slots[i].transform.SetParent(slotPanel.transform);
         }
 
-        AddItem(1);
+        //read from file then add to iventory
+        for (int i = 0; i < textlines.Length; i++)
+        {
+            AddItem(int.Parse(textlines[i]));
+        }
+        //disable and enable invetory canvas
+        if (isActive)
+        {
+            EnabledInventoryPanel();
+        }
+        else
+        {
+            DisableInventoryPanel();
+        }
+    }
+
+    //keyboard toggle I to disable and enable inventory panel
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            if (!isActive)
+            {
+                EnabledInventoryPanel();
+            }
+            else
+            {
+                DisableInventoryPanel();
+            }
+        }
     }
     
     //Add item and check if the item is stackable.
@@ -45,7 +83,7 @@ public class Inventory : MonoBehaviour
         Items itemToAdd = database.FetchItemById(id);
         //check if item is already there and if it is stackable
         //if stackable add to the data show item stack.
-        if (itemToAdd.Stackable && check.CheckItem(itemToAdd))
+        if (itemToAdd.Stackable && CheckItem(itemToAdd))
         {
             for (int i = 0; i < items.Count; i++)
             {
@@ -80,6 +118,35 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+    //check is item exsist
+    bool CheckItem(Items item)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].ID == item.ID)
+                return true;
+        }
+        return false;
+    }
+    //show invetory panel
+    public void EnabledInventoryPanel()
+    {
+        invetoryPanel.SetActive(true);
+        isActive = true;
 
-   
+        if (stopPlayerMovement)
+        {
+            player.canMove = false;
+        }
+    }
+    //disable inventory panel
+    public void DisableInventoryPanel()
+    {
+        invetoryPanel.SetActive(false);
+        isActive = false;
+
+        player.canMove = true;
+    }
+
+
 }
