@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/yggdrasil_battleprototype_scene1.unity
-  isLoaded: 1
-  isActive: 1
